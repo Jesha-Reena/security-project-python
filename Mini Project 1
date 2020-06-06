@@ -1,3 +1,5 @@
+#for encryption 
+
 alphabets='abcdefghijklmnopqrstuvwxyz'
 key=4
 newmsg= ' '
@@ -9,3 +11,20 @@ for character in message:
     print('Encrypted new character is',new_char)
     newmsg+=newchar
 print('The Encrypted message is',newmsg) 
+
+
+
+# for decryption
+alphabets='abcdefghijklmnopqrstuvwxyz'
+key=4
+newmsg= ' '
+message=input('Enter a message:') 
+for character in message:
+    position=alphabet.find(character)
+    new_position = (position-key)%26
+    new_char = alphabet[new_position]
+    print('Decrypted new character is',new_char)
+    newmsg+=newchar
+print('The Decrypted message is',newmsg) 
+
+
